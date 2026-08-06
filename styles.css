@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+:root {
+    --bg: #0b0b0b;
+    --painel: #141414;
+    --linha: #2c2c2c;
+    --laranja: #ff6a1a;
+    --laranja-fundo: #4a2410;
+    --texto: #bdbdbd;
+    --branco: #f2f2f2;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg);
+    background-image: repeating-linear-gradient(
+        180deg,
+        rgba(255, 106, 26, 0.02) 0px,
+        rgba(255, 106, 26, 0.02) 1px,
+        transparent 1px,
+        transparent 3px
+    );
+    color: var(--texto);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+hr {
+    border: none;
+    border-top: 1px dashed var(--linha);
+    margin: 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+header {
+    background-color: var(--bg);
+    padding: 40px 36px;
+    position: relative;
+}
+
+header table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+header table, header tbody, header tr, header td {
+    display: block;
+}
+
+header td {
+    text-align: center;
+    padding: 0;
+}
+
+header h1 {
+    font-size: 2.6rem;
+    color: var(--branco);
+    line-height: 1;
+    text-align: center;
+}
+
+header h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--laranja);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 12px;
+    text-align: center;
+}
+
+header img {
+    display: block;
+    border: 3px solid var(--laranja);
+    outline: 1px solid var(--linha);
+    outline-offset: 6px;
+    border-radius: 0;
+    margin: 0 auto 20px;
+}
+
+main {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 32px 24px 8px;
+}
+
+section {
+    background-color: var(--painel);
+    border: 1px solid var(--linha);
+    padding: 28px 28px 24px;
+    margin: 28px 0;
+}
+
+section h3 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--laranja);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    display: block;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--linha);
+}
+
+article {
+    margin-bottom: 22px;
+    padding-left: 16px;
+    border-left: 2px solid var(--laranja-fundo);
+}
+
+article:last-child {
+    margin-bottom: 0;
+}
+
+article h4 {
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--branco);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+section p {
+    margin: 0 0 10px;
+}
+
+section p:last-child {
+    margin-bottom: 0;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+ul li {
+    padding: 6px 0 6px 20px;
+    border-bottom: 1px dashed var(--linha);
+    position: relative;
+}
+
+ul li:last-child {
+    border-bottom: none;
+}
+
+ul li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: var(--laranja);
+    font-weight: 600;
+}
+
+main section:last-of-type ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+main section:last-of-type li {
+    border: 1px solid var(--linha);
+    padding: 6px 12px 6px 24px;
+    font-size: 0.85rem;
+}
+
+a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid var(--laranja);
+}
+
+a:hover {
+    color: var(--laranja);
+}
+
+footer {
+    background-color: var(--painel);
+    color: var(--texto);
+    padding: 28px 24px;
+    text-align: center;
+}
+
+footer h3 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--branco);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+}
+
+footer address {
+    font-style: normal;
+}
+
+footer p {
+    margin: 6px 0;
+}
+
+footer a {
+    color: var(--laranja);
+    border-bottom: 1px solid transparent;
+}
+
+footer a:hover {
+    color: var(--branco);
+    border-bottom-color: var(--branco);
+}
